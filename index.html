@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tarryn Collins | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 10;
+      padding: 10;
+      box-sizing: border-box;
+      font-family: 'Raleway', sans-serif;
+    }
+
+    body {
+      background-color: #ffffff;
+      color: #151419;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    body.dark-mode {
+      background-color: #151419;
+      color: #ffffff;
+    }
+
+    header {
+      background-color: #151419;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-size: 1.8rem;
+      color: #ffffff;
+    }
+
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #ffffff;
+      font-weight: 600;
+    }
+
+    nav a.active, nav a:hover {
+      border-bottom: 2px solid #151419;
+    }
+
+    .hero {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 150px 150px;
+    }
+
+    .hero-text {
+      max-width: 600px;
+    }
+
+    .hero-text h2 {
+      font-size: 3rem;
+      font-weight: 700;
+    }
+
+    .hero-text h3 {
+      font-size: 1.8rem;
+      font-weight: 400;
+      margin-top: 10px;
+    }
+
+    .hero-text p {
+      margin: 20px 0;
+      color: #151419;
+    }
+
+    .social-icons {
+      margin-top: 30px;
+    }
+
+    .social-icons a {
+      margin-right: 15px;
+      font-size: 1.4rem;
+      color: #151419;
+      text-decoration: none;
+    }
+
+    .cta-button, .resume-button, .skill-button, .project-button {
+      background-color: #151419;
+      color: #ffffff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 20px;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-block;
+      margin: 5px 5px 5px 0;
+      cursor: pointer;
+    }
+
+    .hero-img img {
+      max-width: 400px;
+      border-radius: 50%;
+    }
+
+    section {
+      padding: 150px 150px;
+    }
+
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .toggle-button {
+      margin-left: 20px;
+      padding: 8px 16px;
+      background-color: #151419;
+      color: #ffffff;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    footer {
+      background-color: #ffffff;
+      color: #151419;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    footer a {
+      color: #151419;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+
+    footer .social-icons a {
+      display: inline-block;
+      margin: 0 10px 20px;
+      font-size: 1.4rem;
+      border: 2px solid #ffffff;
+      border-radius: 50%;
+      padding: 10px;
+    }
+
+    .contact-info {
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: center;
+      line-height: 2;
+    }
+
+    .contact-info a {
+      color: #1d4d4f;
+      text-decoration: underline;
+    }
+
+    body.dark-mode .contact-info a {
+      color: #f0f0dc;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Tarryn Collins</h1>
+    <nav>
+      <a href="#" class="active">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+      <button class="toggle-button" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h2>Hi, It's Tarryn</h2>
+      <h3>I'm a <span style="color: #151419; font-weight: 700;">Data Analyst & Developer</span></h3>
+      <p>
+        Results-driven IT graduate with a strong foundation in digital marketing analytics and a passion for data science.
+        Seeking to leverage programming skills and data techniques to provide actionable insights.
+      </p>
+      <div class="social-icons">
+        <a href="https://www.linkedin.com/in/tarryncollins/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/TarrynCollins4" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="mailto:collinstarryn4@gmail.com"><i class="fas fa-envelope"></i></a>
+      </div>
+      <a class="resume-button" href="/resume.pdf" target="_blank">Download Resume</a>
+    </div>
+    <div class="hero-img">
+      <img src="https://sdmntprukwest.oaiusercontent.com/files/00000000-8af4-6243-b07c-3a0aeaf05836/raw?se=2025-05-17T08%3A47%3A13Z&sp=r&sv=2024-08-04&sr=b&scid=00000000-0000-0000-0000-000000000000&skoid=c953efd6-2ae8-41b4-a6d6-34b1475ac07c&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-05-17T01%3A31%3A23Z&ske=2025-05-18T01%3A31%3A23Z&sks=b&skv=2024-08-04&sig=XV74Ma5p5Zer/9lyDhqD/dirVKSr3A%2ByJIC8HQ4U8Cg%3D" alt="Tarryn Avatar">
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div>
+      <a class="skill-button" href="https://github.com/TarrynCollins4" target="_blank">Python</a>
+      <a class="skill-button" href="https://github.com/TarrynCollins4" target="_blank">SQL</a>
+      <a class="skill-button" href="https://github.com/TarrynCollins4" target="_blank">JavaScript</a>
+      <a class="skill-button" href="https://github.com/TarrynCollins4" target="_blank">Data Visualization</a>
+      <a class="skill-button" href="https://github.com/TarrynCollins4" target="_blank">Looker Studio</a>
+      <a class="skill-button" href="https://github.com/TarrynCollins4" target="_blank">Tableau</a>
+      <a class="skill-button" href="https://github.com/TarrynCollins4" target="_blank">Google Analytics</a>
+      <a class="skill-button" href="https://github.com/TarrynCollins4" target="_blank">HubSpot</a>
+      <a class="skill-button" href="https://github.com/TarrynCollins4" target="_blank">ETL Pipelines</a>
+      <a class="skill-button" href="https://github.com/TarrynCollins4" target="_blank">Machine Learning</a>
+      <a class="skill-button" href="https://github.com/TarrynCollins4" target="_blank">Git</a>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div>
+      <a class="project-button" href="https://github.com/TarrynCollins4/open-weather-etl" target="_blank">Open Weather ETL</a>
+      <a class="project-button" href="https://github.com/TarrynCollins4/airbnb-listings" target="_blank">Airbnb Listings</a>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="contact-info">
+      <p>Email: <a href="mailto:collinstarryn4@gmail.com">collinstarryn4@gmail.com</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/tarryncollins/" target="_blank">/tarryncollins</a></p>
+      <p>GitHub: <a href="https://github.com/TarrynCollins4" target="_blank">@TarrynCollins4</a></p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="social-icons">
+      <a href="https://www.linkedin.com/in/tarryncollins/" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/TarrynCollins4" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="mailto:collinstarryn4@gmail.com"><i class="fas fa-envelope"></i></a>
+    </div>
+    <div>
+      <a href="#about">About Me</a>
+      <a href="/resume.pdf" target="_blank">Resume</a>
+      <a href="#skills">Skills & Services</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact Me</a>
+    </div>
+    <p>&copy; Tarryn Collins 2025 | All Rights Reserved</p>
+  </footer>
+
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+    }
+  </script>
+</body>
+
+</html>
