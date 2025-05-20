@@ -9,52 +9,61 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
     * {
-      margin: 10;
-      padding: 10;
+      margin: 0;
+      padding: 0;
       box-sizing: border-box;
       font-family: 'Raleway', sans-serif;
     }
 
     body {
       background-color: #ffffff;
-      color: #151419;
+      color: #1d4d4f;
       transition: background-color 0.3s, color 0.3s;
     }
 
     body.dark-mode {
-      background-color: #151419;
+      background-color: #1d4d4f;
       color: #ffffff;
     }
 
     header {
-      background-color: #151419;
+      background-color: #a7cdb0;
       padding: 20px 40px;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      flex-wrap: wrap;
     }
 
     header h1 {
       font-size: 1.8rem;
-      color: #ffffff;
+      color: #1d4d4f;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 10px;
     }
 
     nav a {
-      margin-left: 20px;
       text-decoration: none;
-      color: #ffffff;
+      color: #1d4d4f;
       font-weight: 600;
     }
 
-    nav a.active, nav a:hover {
-      border-bottom: 2px solid #151419;
+    nav a.active,
+    nav a:hover {
+      border-bottom: 2px solid #1d4d4f;
     }
 
     .hero {
       display: flex;
-      justify-content: space-between;
+      flex-direction: column-reverse;
       align-items: center;
-      padding: 150px 150px;
+      padding: 60px 20px;
+      text-align: center;
     }
 
     .hero-text {
@@ -62,63 +71,66 @@
     }
 
     .hero-text h2 {
-      font-size: 3rem;
+      font-size: 2.5rem;
       font-weight: 700;
     }
 
     .hero-text h3 {
-      font-size: 1.8rem;
+      font-size: 1.5rem;
       font-weight: 400;
       margin-top: 10px;
     }
 
     .hero-text p {
       margin: 20px 0;
-      color: #151419;
+      color: #406b68;
     }
 
     .social-icons {
-      margin-top: 30px;
+      margin-top: 20px;
     }
 
     .social-icons a {
-      margin-right: 15px;
+      margin: 0 10px;
       font-size: 1.4rem;
-      color: #151419;
+      color: #406b68;
       text-decoration: none;
     }
 
-    .cta-button, .resume-button, .skill-button, .project-button {
-      background-color: #151419;
-      color: #ffffff;
+    .cta-button,
+    .resume-button,
+    .skill-button,
+    .project-button {
+      background-color: #a7cdb0;
+      color: #1d4d4f;
       padding: 10px 20px;
       border: none;
       border-radius: 20px;
       font-weight: 600;
       text-decoration: none;
       display: inline-block;
-      margin: 5px 5px 5px 0;
+      margin: 5px;
       cursor: pointer;
     }
 
     .hero-img img {
-      max-width: 400px;
+      max-width: 250px;
       border-radius: 50%;
     }
 
     section {
-      padding: 150px 150px;
+      padding: 60px 20px;
     }
 
     section h2 {
       font-size: 2rem;
       margin-bottom: 20px;
+      text-align: center;
     }
 
     .toggle-button {
-      margin-left: 20px;
       padding: 8px 16px;
-      background-color: #151419;
+      background-color: #1d4d4f;
       color: #ffffff;
       border: none;
       border-radius: 20px;
@@ -126,42 +138,23 @@
       font-weight: bold;
     }
 
-    footer {
-      background-color: #ffffff;
-      color: #151419;
-      text-align: center;
-      padding: 40px 20px;
-    }
-
-    footer a {
-      color: #151419;
-      margin: 0 10px;
-      text-decoration: none;
-    }
-
-    footer .social-icons a {
+    .skill-button,
+    .project-button {
       display: inline-block;
-      margin: 0 10px 20px;
-      font-size: 1.4rem;
-      border: 2px solid #ffffff;
-      border-radius: 50%;
-      padding: 10px;
-    }
-
-    .contact-info {
-      max-width: 600px;
-      margin: 0 auto;
       text-align: center;
-      line-height: 2;
     }
 
-    .contact-info a {
-      color: #1d4d4f;
-      text-decoration: underline;
-    }
+    @media (min-width: 768px) {
+      .hero {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+        padding: 80px 40px;
+      }
 
-    body.dark-mode .contact-info a {
-      color: #f0f0dc;
+      .hero-img img {
+        max-width: 350px;
+      }
     }
   </style>
 </head>
@@ -182,7 +175,7 @@
   <section class="hero">
     <div class="hero-text">
       <h2>Hi, It's Tarryn</h2>
-      <h3>I'm a <span style="color: #151419; font-weight: 700;">Data Analyst & Developer</span></h3>
+      <h3>I'm a <span style="color: #8dc0a9; font-weight: 700;">Data Analyst & Developer</span></h3>
       <p>
         Results-driven IT graduate with a strong foundation in digital marketing analytics and a passion for data science.
         Seeking to leverage programming skills and data techniques to provide actionable insights.
@@ -199,20 +192,27 @@
     </div>
   </section>
 
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I’m an IT graduate passionate about data-driven decisions, storytelling through analysis, and building digital solutions that create impact.
+    </p>
+  </section>
+
   <section id="skills">
     <h2>Skills</h2>
     <div>
-      <a class="skill-button" href="https://github.com/TarrynCollins4" target="_blank">Python</a>
-      <a class="skill-button" href="https://github.com/TarrynCollins4" target="_blank">SQL</a>
-      <a class="skill-button" href="https://github.com/TarrynCollins4" target="_blank">JavaScript</a>
-      <a class="skill-button" href="https://github.com/TarrynCollins4" target="_blank">Data Visualization</a>
-      <a class="skill-button" href="https://github.com/TarrynCollins4" target="_blank">Looker Studio</a>
-      <a class="skill-button" href="https://github.com/TarrynCollins4" target="_blank">Tableau</a>
-      <a class="skill-button" href="https://github.com/TarrynCollins4" target="_blank">Google Analytics</a>
-      <a class="skill-button" href="https://github.com/TarrynCollins4" target="_blank">HubSpot</a>
-      <a class="skill-button" href="https://github.com/TarrynCollins4" target="_blank">ETL Pipelines</a>
-      <a class="skill-button" href="https://github.com/TarrynCollins4" target="_blank">Machine Learning</a>
-      <a class="skill-button" href="https://github.com/TarrynCollins4" target="_blank">Git</a>
+      <span class="skill-button">Python</span>
+      <span class="skill-button">SQL</span>
+      <span class="skill-button">JavaScript</span>
+      <span class="skill-button">Data Visualization</span>
+      <span class="skill-button">Looker Studio</span>
+      <span class="skill-button">Tableau</span>
+      <span class="skill-button">Google Analytics</span>
+      <span class="skill-button">HubSpot</span>
+      <span class="skill-button">ETL Pipelines</span>
+      <span class="skill-button">Machine Learning</span>
+      <span class="skill-button">Git</span>
     </div>
   </section>
 
@@ -226,28 +226,10 @@
 
   <section id="contact">
     <h2>Contact</h2>
-    <div class="contact-info">
-      <p>Email: <a href="mailto:collinstarryn4@gmail.com">collinstarryn4@gmail.com</a></p>
-      <p>LinkedIn: <a href="https://www.linkedin.com/in/tarryncollins/" target="_blank">/tarryncollins</a></p>
-      <p>GitHub: <a href="https://github.com/TarrynCollins4" target="_blank">@TarrynCollins4</a></p>
-    </div>
+    <p>Email: <a href="mailto:collinstarryn4@gmail.com">collinstarryn4@gmail.com</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/tarryncollins/" target="_blank">/tarryncollins</a></p>
+    <p>GitHub: <a href="https://github.com/TarrynCollins4" target="_blank">@TarrynCollins4</a></p>
   </section>
-
-  <footer>
-    <div class="social-icons">
-      <a href="https://www.linkedin.com/in/tarryncollins/" target="_blank"><i class="fab fa-linkedin"></i></a>
-      <a href="https://github.com/TarrynCollins4" target="_blank"><i class="fab fa-github"></i></a>
-      <a href="mailto:collinstarryn4@gmail.com"><i class="fas fa-envelope"></i></a>
-    </div>
-    <div>
-      <a href="#about">About Me</a>
-      <a href="/resume.pdf" target="_blank">Resume</a>
-      <a href="#skills">Skills & Services</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact Me</a>
-    </div>
-    <p>&copy; Tarryn Collins 2025 | All Rights Reserved</p>
-  </footer>
 
   <script>
     function toggleDarkMode() {
